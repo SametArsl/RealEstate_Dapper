@@ -2,7 +2,6 @@
 using Microsoft.AspNetCore.Mvc;
 using RealEstate_Dapper_API.DTOs.ServiceDTOs;
 using RealEstate_Dapper_API.Repositories.ServiceRepository;
-using RealEstate_Dapper_API.Repositories.ServiceRepository;
 
 namespace RealEstate_Dapper_API.Controllers
 {

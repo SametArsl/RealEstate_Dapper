@@ -2,11 +2,11 @@
 
 namespace RealEstate_Dapper_UI.Controllers
 {
-    public class StatisticsController : Controller
+    public class StatisticController : Controller
     {
         private readonly IHttpClientFactory _httpClientFactory;
 
-        public StatisticsController(IHttpClientFactory httpClientFactory)
+        public StatisticController(IHttpClientFactory httpClientFactory)
         {
             _httpClientFactory = httpClientFactory;
         }
