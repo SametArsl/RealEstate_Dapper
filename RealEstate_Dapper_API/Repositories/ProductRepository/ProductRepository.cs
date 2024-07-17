@@ -13,6 +13,30 @@ namespace RealEstate_Dapper_API.Repositories.ProductRepository
             _context = context;
         }
 
+        public async void ChangeProductDealOfTheDayToFalse(int id)
+        {
+            string query = "Update Product Set DealOfTheDay=0 where ProductId=@productId";
+            var parameters = new DynamicParameters();
+            parameters.Add("@productId", id);
+
+            using (var connection = _context.CreateConnection())
+            {
+                await connection.ExecuteAsync(query, parameters);
+            }
+        }
+
+        public async void ChangeProductDealOfTheDayToTrue(int id)
+        {
+            string query = "Update Product Set DealOfTheDay=1 where ProductId=@productId";
+            var parameters = new DynamicParameters();
+            parameters.Add("@productId", id);
+
+            using (var connection = _context.CreateConnection())
+            {
+                await connection.ExecuteAsync(query, parameters);
+            }
+        }
+
         public async Task<List<ResultProductDTO>> GetAllProductsAsync()
         {
             string query = "select * from Product";
